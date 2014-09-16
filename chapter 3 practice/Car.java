@@ -12,13 +12,14 @@ public class Car
     private double fuelEfficiency;
     
     /** the Fuel, in gallons left in the tank */
-    private double FuelInTank;
+    private double fuelInTank;
 
     /**
      * takes effeciency taken as parameter
      */
     public Car(double fuelEfficiency)
     {
+        this.fuelEfficiency = fuelEfficiency;
     }
 
     /**
@@ -32,6 +33,7 @@ public class Car
      */
     public void addGas(double gallons)
     {
+        this.fuelInTank = this.fuelInTank + gallons;
     }
     
     /**
@@ -45,6 +47,7 @@ public class Car
      */
     public void drive(double miles)
     {
+        this.fuelInTank = this.fuelInTank - miles/this.fuelEfficiency;
     }
     
     /**
@@ -53,10 +56,10 @@ public class Car
      * 
      * @return the # of galons of gas remaining in the tank
      */
-    public int getGasInTank()
+    public double getGasInTank()
     {
-       
-        return 0;
+       return  fuelInTank;
+        
     }
 
 

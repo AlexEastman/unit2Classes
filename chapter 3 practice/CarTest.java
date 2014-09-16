@@ -21,16 +21,6 @@ public class CarTest
     {
     }
     
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @Before
-    public void setUp()
-    {
-    }
-
     @Test
     public void testGetGasInTank()
     {
@@ -45,9 +35,28 @@ public class CarTest
         Car testCar = new Car(50);
         testCar.addGas(20);
         double gallons = testCar.getGasInTank();
-        asserEquals(20.0,gallons, 1e-6);
+        assertEquals(20.0,gallons, 1e-6);
         
         testCar.addGas(5);
         gallons = testCar.getGasInTank();
-        assert
+        assertEquals(25.0, gallons, 1e-6);
+    }
+    
+    @Test
+    public void testDrive()
+    {
+        Car testCar = new Car(50);
+        testCar.addGas(20);
+        testCar.drive(25);
+        double gallons = testCar.getGasInTank();
+        assertEquals(19.5, gallons, 1e-6);
+        
+        testCar.drive(100);
+        gallons = testCar.getGasInTank();
+        assertEquals(17.5, gallons, 1e-6);
+        
+    }
+    
+    
+        
 }
