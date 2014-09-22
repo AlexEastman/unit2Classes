@@ -4,6 +4,7 @@ import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
+import java.awt.Color;
 
 /**
  * Write a description of class Target here.
@@ -17,24 +18,25 @@ public class Target
     private int x;
     private int y;
     private int radius;
-    private int scalarX;
-    private int scalarY;
-    private int offsetX;
-    private int offsetY;
+    private int diameter;
+    private int numCircles;
+   
+    
+  
    
 
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x, int y, int diameter)
+    public Target(int x, int y, int radius, int numCirlces)
     {
         this.x = x;
         this.y = y;
-        this.radius = diameter/2;
-        this.scalarX = this.x/diameter;
-        this.scalarY = this.y/diameter;
-        this.offsetX = this.scalarX*this.radius;
-        this.offsetY = this.scalarY*this.radius;
+        this.radius = radius;
+        this.numCircles = numCircles;    
+        
+       
+        
     }
 
     /**
@@ -50,9 +52,18 @@ public class Target
      */
     public void draw(Graphics2D g2)
     {
-       Ellipse2D.Double circle1
-        = new Ellipse2D.Double(this.x-this.offsetX,this.y-this.offsetY,this.radius,this.radius);
-        g2.draw(circle1);
+         
+                    
+          Ellipse2D.Double circle1
+          = new Ellipse2D.Double(this.x-this.radius,this.y-this.radius,this.diameter,this.diameter);
+      
+          
+          g2.setColor(this.color);          
+          g2.draw(circle1);
+          g2.fill(circle1);
+           
+           
+        
     }
 
 }
