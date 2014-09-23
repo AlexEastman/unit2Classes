@@ -14,12 +14,17 @@ public class TargetComponent extends JComponent
    public void paintComponent(Graphics g)
    {
        Graphics2D g2 = (Graphics2D) g;
+       //initialize variables here
+       int centerX = 300;
+       int centerY = 300;
+       int radius = 250;
+       int numCircles = 2;
        
-       Target target1 = new Target(300,300,600);
        
+       Target target1 = new Target(centerX,centerY,radius,numCirlces);
        target1.draw(g2);
        
-    
+       }
    }
 
 
