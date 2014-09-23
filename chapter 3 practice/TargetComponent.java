@@ -15,10 +15,11 @@ public class TargetComponent extends JComponent
    {
        Graphics2D g2 = (Graphics2D) g;
        //initialize variables here
-       int centerX = 300;
-       int centerY = 300;
-       int radius = 250;
-       int numCircles = 6;
+       double centerX = 400;
+       double centerY = 400;
+       double thickness = 100;
+       double numCircles = 4;
+       double radius = numCircles * thickness;
        
        Target target1 = new Target(centerX,centerY,radius,numCircles);
        target1.draw(g2);
