@@ -18,14 +18,11 @@ public class TargetComponent extends JComponent
        int centerX = 300;
        int centerY = 300;
        int radius = 250;
-       int numCircles = 2;
+       int numCircles = 6;
        
-       
-       Target target1 = new Target(centerX,centerY,radius,numCirlces);
+       Target target1 = new Target(centerX,centerY,radius,numCircles);
        target1.draw(g2);
        
-       }
+       
    }
-
-
 }

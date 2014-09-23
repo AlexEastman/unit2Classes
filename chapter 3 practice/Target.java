@@ -5,6 +5,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  * Write a description of class Target here.
@@ -15,11 +16,11 @@ import java.awt.Color;
 public class Target
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-    private int y;
-    private int radius;
-    private int diameter;
-    private int numCircles;
+    private double x;
+    private double y;
+    private double radius;
+    private double diameter;
+    private double numCircles;
    
     
   
@@ -28,7 +29,7 @@ public class Target
     /**
      * Default constructor for objects of class Target
      */
-    public Target(int x, int y, int radius, int numCirlces)
+    public Target(double x, double y, double radius, double numCircles)
     {
         this.x = x;
         this.y = y;
@@ -52,18 +53,30 @@ public class Target
      */
     public void draw(Graphics2D g2)
     {
-         
-                    
-          Ellipse2D.Double circle1
-          = new Ellipse2D.Double(this.x-this.radius,this.y-this.radius,this.diameter,this.diameter);
-      
           
-          g2.setColor(this.color);          
-          g2.draw(circle1);
-          g2.fill(circle1);
-           
-           
         
-    }
+          for (int i = 0; i<this.numCircles; i++)
+          {
+              this.radius = ((this.numCircles - i)/this.numCircles)*this.radius;
+              this.diameter = this.radius*2;
+              
+              Ellipse2D.Double circle1             
+              = new Ellipse2D.Double(this.x-this.radius,this.y-this.radius,this.diameter,this.diameter);
+              
+              if (i%2 == 0)
+              {
+                 g2.setColor(Color.RED);
+              }
+              else
+              {
+                  g2.setColor(Color.BLACK);
+              }
+              g2.fill(circle1);
+              g2.draw(circle1);
+             
+           } 
+         
 
-}
+
+        }
+    }
