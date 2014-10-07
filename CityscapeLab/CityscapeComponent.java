@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import java.awt.Color;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -26,8 +27,24 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        // create instances of classes and invoke the draw method on each
-        // ...
+        Sky sky = new Sky(Color.BLUE);
+        sky.draw(g2);
+        
+        Grass grass = new Grass(Color.GREEN);
+        grass.draw(g2);
+        
+        BigYellowStar sun = new BigYellowStar(700,50,50);
+        sun.draw(g2);        
+        
+        Building building1 = new Building(20,5,5,150,225);
+        building1.draw(g2);
+        
+        Building building2 = new Building(200,5,5,125,250);
+        building2.draw(g2);
+        
+        
+       
+        
         
         
     }

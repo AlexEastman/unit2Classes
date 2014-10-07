@@ -34,10 +34,7 @@ public class Target
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.numCircles = numCircles;    
-        
-       
-        
+        this.numCircles = numCircles;
     }
 
     /**
