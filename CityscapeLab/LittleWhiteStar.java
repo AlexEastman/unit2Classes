@@ -16,17 +16,20 @@ public class LittleWhiteStar
     /** description of instance variable x (add comment for each instance variable) */
     private int x;
     private int y;
-    private int diameter;
-    
+    private double diameter;
+    private double radius;
+    private double rt3;
 
     /**
      * Default constructor for objects of class Sun
      */
-    public BigYellowStar(int x,int y,int radius)
+    public LittleWhiteStar(int x,int y,double diameter)
     {
         this.x = x;
         this.y = y;
-        this.diameter = radius;
+        this.radius = diameter/2.0;
+        this.diameter = diameter;
+        rt3 = Math.sqrt(3);
     }
 
     /**
@@ -42,7 +45,9 @@ public class LittleWhiteStar
      */
     public void draw(Graphics2D g2)
     {
-        
+        Ellipse2D.Double ellipse1 = new Ellipse2D.Double(x-radius/3,y-radius,diameter/3,diameter);
+        Ellipse2D.Double ellipse2 = new Ellipse2D.Double(x-radius,y-radius/3,diameter,diameter/3);
+        Ellipse2D.Double ellipse3 = new Ellipse2D.Double(x-
     }
 
 }
