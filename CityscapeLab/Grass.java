@@ -7,10 +7,11 @@ import java.awt.Color;
 
 
 /**
- * Write a description of class Grass here.
+ * Defines the Static green rectangle of grass that my city has instead of roads, 
+ * possibly because it is inhabited by hippies
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Alex Eastman
+ * @version 0.2
  */
 public class Grass
 {
@@ -18,7 +19,7 @@ public class Grass
     private Color color;
 
     /**
-     * Default constructor for objects of class Grass
+     * If one wanted the grass to change color the color parameter makes it easier to customize
      */
     public Grass(Color color)
     {

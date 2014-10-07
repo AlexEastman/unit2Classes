@@ -8,45 +8,44 @@ import java.awt.Color;
 
 
 /**
- * Write a description of class Building here.
+ * Building is a class that defines the shape and color of buildings in the city scape
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Alex Eastman
+ * @version 0.11
  */
 public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** xCord: this is the xPosition of the buildings top left corner*/
     private int xCord;
+    /**rows: this is the number of rows seperated by stripes*/
     private int rows;
+    /**columns: this is the number of columns seperated by stripes*/
     private int columns;
+    /**width: the width of the building rectangle*/
     private int width;
+    /**height; the height of the building rectange*/
     private int height;
+    /**yCord: bottom left corner of the building*/
     private int yCord;
 
     /**
-     * Default constructor for objects of class Building
+     * Takes inputs for each building, xCoordinate of building number of row, columns
+     * and the width and height
      */
     public Building(int xCord, int rows, int columns, int width, int height)
     {
         
-        this.xCord = xCord;
+        this.xCord = xCord; 
         this.rows = rows;
         this.columns = columns;
         this.width = width;
         this.height = height;
-        this.yCord = 540-height;
+        this.yCord = 540-height; //this a set distance from the bottom of the screen
+        // it never changes because the buildings all start at same height
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * This method defines how to draw the building itself
      */
     public void draw(Graphics2D g2)
     {
@@ -54,7 +53,7 @@ public class Building
         g2.setColor(Color.BLACK);
         g2.fill(shell);
         
-        g2.setColor(Color.GRAY);        
+        g2.setColor(Color.GRAY); //makes customizeable vertical lines, change rows and columns to change the number of lines     
         for(double i=1;i<columns; i++)
         {
             double newXCord = xCord + (i * width/columns);
