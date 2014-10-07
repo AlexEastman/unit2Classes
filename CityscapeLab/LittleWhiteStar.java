@@ -47,7 +47,13 @@ public class LittleWhiteStar
     {
         Ellipse2D.Double ellipse1 = new Ellipse2D.Double(x-radius/3,y-radius,diameter/3,diameter);
         Ellipse2D.Double ellipse2 = new Ellipse2D.Double(x-radius,y-radius/3,diameter,diameter/3);
-        Ellipse2D.Double ellipse3 = new Ellipse2D.Double(x-
+        Ellipse2D.Double ellipse3 = new Ellipse2D.Double(x-radius/rt3,y-radius/rt3,
+                                                         diameter/rt3,diameter/rt3);
+        g2.setColor(Color.white);
+        g2.fill(ellipse1);
+        g2.fill(ellipse2);
+        g2.fill(ellipse3);
+        
     }
 
 }
