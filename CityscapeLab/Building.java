@@ -29,7 +29,7 @@ public class Building
     private int yCord;
 
     /**
-     * Takes inputs for each building, xCoordinate of building number of row, columns
+     * Takes inputs for each building, xCoordinate of building number of rows, columns
      * and the width and height
      */
     public Building(int xCord, int rows, int columns, int width, int height)

@@ -6,22 +6,27 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Sun here.
+ * Little white star creates a white star on the background of the image
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Alex Eastman
+ * @version 0.1
  */
 public class LittleWhiteStar
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** x: center x coordinate of the star */
     private int x;
+    /** y: center y coordinate of the star */
     private int y;
+    /** diameter: width of the star at widest point */
     private double diameter;
+    /** radius: calculated for convienence and clarity */
     private double radius;
+    /** rt3: this is used as the ratio between the widths, 
+     * this is not final because i may change it if a different ratio is prettier */
     private double rt3;
 
     /**
-     * Default constructor for objects of class Sun
+     * This class takes input for the center of the star and for its size
      */
     public LittleWhiteStar(int x,int y,double diameter)
     {
@@ -33,15 +38,8 @@ public class LittleWhiteStar
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * defines how to draw the star, it is 2 ellipses and 1 circle (3 ellipses) the ratio is set
+     * in the constructor method
      */
     public void draw(Graphics2D g2)
     {

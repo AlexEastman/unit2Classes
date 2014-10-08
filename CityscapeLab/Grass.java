@@ -15,7 +15,7 @@ import java.awt.Color;
  */
 public class Grass
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** color: the color of the grass */
     private Color color;
 
     /**
@@ -27,15 +27,9 @@ public class Grass
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * This method draws a green rectangle that fills a static portion of the bottom of 
+     * the screen, this constant for height (540) is also used as the base point of my
+     * buildings as this is earth and our buildings dont float.
      */
     public void draw(Graphics2D g2)
     {

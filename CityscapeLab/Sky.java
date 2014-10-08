@@ -6,18 +6,18 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Sky here.
+ * Creates a colored rectangle which fills the screen
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Alex Eastman
+ * @version 0.1
  */
 public class Sky
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /**  Color: the color the sky is set to*/
     private Color color;
 
     /**
-     * Default constructor for objects of class Sky
+     * color: takes a parameter for the color of the sky
      */
     public Sky(Color color)
     {
@@ -25,15 +25,8 @@ public class Sky
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * Creates a rectangle the size of the screen and sets its color to the input parameter
+     * 
      */
     public void draw(Graphics2D g2)
     {

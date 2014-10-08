@@ -6,39 +6,34 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 
 /**
- * Write a description of class Sun here.
+ * Creates a sun which is a circular ellipse and is always yellow
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Alex Eastman
+ * @version 0.3
  */
 public class BigYellowStar
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** x: top left x coordinate of the star */
     private int x;
+    /** y: top left y coordinate of the star */
     private int y;
+    /** diameter: diameter of the star */
     private int diameter;
     
 
     /**
-     * Default constructor for objects of class Sun
+     * takes input for the diameter and the top left coord of the sun
      */
-    public BigYellowStar(int x,int y,int radius)
+    public BigYellowStar(int x,int y,int diameter)
     {
         this.x = x;
         this.y = y;
-        this.diameter = radius;
+        this.diameter = diameter;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     *Makes a circular ellipse and sets its color to yellow
+     * 
      */
     public void draw(Graphics2D g2)
     {
